@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="http://localhost/proyectodaw/style.css">
+</head>
+ <!-- FOTO LOGO y REDIRECCIONA A LA PAGINA PRINCIPAL-->
+ <a href="http://localhost/proyectodaw/index.html">
+    <img src="Imagenes\Logo.png" class="Logo" alt="">
+ </a>
+<body>
+    <form method="POST" action="conexion_bbdd.php">
+    <div class="formulario">
+        <h1>REGISTRAR</h1>
+        
+            <div class="username nombre">
+                <input type="text"name="nombre" required>
+                <label>Nombre</label>
+            </div>
+            <div class="username apellidos">
+                <input type="text" name="apellidos" required>
+                <label>Apellidos</label>
+            </div>
+            <div class="username">
+                <input type="text" name="usuario" required>
+                <label>Nombre de Usuario</label>
+            </div>
+            <div class="username">
+                <input type="password" name="contraseña" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="username direccion">
+                <input type="text" name="direccion" required>
+                <label>Dirección</label>
+            </div>
+            
+            <input type="submit" value="Registrar" name="regitro">
+            
+        </form>
+    </div>
+</body>
+</html>

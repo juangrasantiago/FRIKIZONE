@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRIKIZONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- CLASE DE FONDO DE LA WEB-->
+    <div class="gradient"></div><div class="gradient"></div>
+
+    <!-- HEADER -->
+
+    <header>
+        <!-- FOTO LOGO y REDIRECCIONA A LA PAGINA PRINCIPAL-->
+        <a href="http://localhost/proyectodaw/index.html">
+        <img src="Imagenes\Logo.png" class="Logo" alt="">
+        </a>
+
+        <!-- Enlace a la sección "¿Quiénes Somos?" -->
+        <div class="quienes-somos">
+        <a href="quienesSomos.html" onclick="mostrarSeccion('quienes-somos')">¿Quiénes Somos?</a>
+        </div>
+
+
+        <!--ICONO USUARIO-->
+        <div class="usuario">
+           <a href="registro-usuario.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-usuario">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg></a>
+              <H3>Acceder</H3>
+        </div>
+        
+        <!--ICONO CARRITO-->
+        <form id="form-cart" method="POST" action="guardar_carrito.php">
+            <div class="icono-carrito">
+
+                <div class="container-cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-carrito">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                      <h3></h3>
+                   
+                    <div class="count-products">
+                         <span id="contador-productos">0</span>
+                    </div>
+                </div>
+               
+             <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+
+                    <div class="cart-products">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito"></span>
+                            <p class="titulo-producto-carrito"></p>
+                            <span class="precio-producto-carrito"></span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ïcono-x" fill="transparent" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="submit" class="cart-empty" id="btnPagar" value="Pagar ya"/>
+             </div>
+               
+              <div class="cart-total">
+                <h3>Total:</h3>
+                 <span class="total-pagar">0€</span>
+              </div>
+              
+              
+            </div>
+        </form>
+            <span id="mensaje-bienvenida"></span>
+    </header>
+    
+    <h2>Bienvenido a tu zona Friki</h2>
+
+
+    <!--MENÚ BOTONES-->
+    <div class="button">
+        <button onclick="mostrarSeccion('ps4')" class="button">PS4</button>
+        <button onclick="mostrarSeccion('ps5')" class="button">PS5</button>
+        <button onclick="mostrarSeccion('pc')" class="button">PC</button>
+        <button onclick="mostrarSeccion('switch')" class="button">SWITCH</button>
+        <button onclick="mostrarSeccion('xbox')" class="button">XBOX</button>
+        <button onclick="mostrarSeccion('mesa')" class="button">JUEGOS DE MESA</button>
+        <button onclick="mostrarSeccion('clasicos')" class="button">CLÁSICOS</button>
+    </div>
+
+   <!--Carrusel de imagenes videojuegos-->
+
+   <div class="carrusel-container-videojuegos">
+    <h2>Nuestras  Novedades</h2>
+    <div class="carrusel-slide-videojuegos">
+        <img src="Imagenes\bloodborne.jpeg" alt="juego">
+        <img src="Imagenes\liesofp.jpeg" alt="juego">
+        <img src="Imagenes\tsushima.jpeg" alt="juego">
+        <img src="Imagenes\residentevil2.jpg" alt="juego">
+        <img src="Imagenes\demonsoul.jpeg" alt="juego">
+        <img src="Imagenes\pokemon.jpeg" alt="juego">
+        <img src="Imagenes\farcry6.jpeg" alt="juego">
+        <img src="Imagenes\eldenring.jpeg" alt="juego">
+        <img src="Imagenes\dishonored.jpg" alt="juego">
+        <img src="Imagenes\fc24.jpeg" alt="juego">
+        <img src="Imagenes\darksoul2.jpeg" alt="juego">
+        <img src="Imagenes\zelda.jpg" alt="juego">
+        <img src="Imagenes\thesurge.jpeg" alt="juego">
+        <img src="Imagenes\fallout76.jpg" alt="juego">
+        <img src="Imagenes\spiderman.jpeg" alt="juego">
+        <img src="Imagenes\wonder.jpeg" alt="juego">
+        <img src="Imagenes\battlefield.jpg" alt="juego">
+        <img src="Imagenes\animalcrossing.jpg" alt="juego">
+
+        <!-- Se Añaden más imágenes según sea necesario -->
+    </div>
+  </div>
+
+  <div class="carrusel-container-mesa">
+    <h2>Nuestros Clásicos</h2>
+    <div class="carrusel-slide-mesa">
+        <img src="Imagenes\risk.jpeg" alt="juego">
+        <img src="Imagenes\catan.jpeg" alt="juego">
+        <img src="Imagenes\cluedo.jpeg" alt="juego">
+        <img src="Imagenes\ciudadelas.jpeg" alt="juego">
+        <img src="Imagenes\coleccion.jpeg" alt="juego">
+        <img src="Imagenes\scrabble.jpeg" alt="juego">
+        <img src="Imagenes\parchis.png" alt="juego">
+        <img src="Imagenes\uno.jpeg" alt="juego">
+
+        <!-- Se Añaden más imágenes según sea necesario -->
+    </div>
+  </div>
+    <!-- SECCIONES DE CONTENIDO-->
+ <!-- Contenido de la sección PS4 -->
+    <section id="ps4" style="display: none;">
+        
+        <h2>PS4</h2>
+    <h2>Bienvenido a la sección de PlayStation 4.</h2>
+    
+    <div class="container-juegos">
+        <div class="container-PS4">
+            <figure>
+                <img src="Imagenes\bloodborne.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Bloodborne</h2>
+                <p class="price">16€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="container-PS4">
+            <figure>
+                <img src="Imagenes\liesofp.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Lies of P</h2>
+                <p class="price">54€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="container-PS4">
+            <figure>
+                <img src="Imagenes\tsushima.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Ghost Tsushima</h2>
+                <p class="price">44€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="container-PS4">
+            <figure>
+                <img src="Imagenes\fc24.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>FC24</h2>
+                <p class="price">35€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+     </div>
+    </section>
+     <!-- Contenido de la sección PS5 -->
+    <section id="ps5" style="display: none;">
+       
+        <h2>PS5</h2>
+        <h2>Bienvenido a la sección de PlayStation 5.</h2>
+     
+     <div class="container-juegos">
+
+        <div class="container-PS5">
+            <figure>
+                <img src="Imagenes\demonsoul.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Demon Soul</h2>
+                <p class="price">69€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="container-PS5">
+            <figure>
+                <img src="Imagenes\eldenring.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Elden Ring</h2>
+                <p class="price">43€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="container-PS5">
+            <figure>
+                <img src="Imagenes\spiderman.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Spider-Man 2</h2>
+                <p class="price">79€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+        <div class="container-PS5">
+            <figure>
+                <img src="Imagenes\hogwarts.jpeg" alt="juego">
+            </figure>
+            <div class="info-juego">
+                <h2>Hogwarts Legacy</h2>
+                <p class="price">40€</p>
+                <button class="btn-add-cart">Comprar</button>
+            </div>
+        </div>
+     </div>
+    </section>
+    <!-- Contenido de la sección PC -->
+    <section id="pc" style="display: none;">
+        
+        <h2>PC Gaming</h2>
+        <div class="container-juegos">
+
+            <div class="container-pc">
+                <figure>
+                    <img src="Imagenes\cyberpunk.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Cyberpunk</h2>
+                    <p class="price">23€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-pc">
+                <figure>
+                    <img src="Imagenes\dishonored.jpg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Dishonored</h2>
+                    <p class="price">5€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-pc">
+                <figure>
+                    <img src="Imagenes\residentevil2.jpg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Resident Evil 2</h2>
+                    <p class="price">6€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-pc">
+                <figure>
+                    <img src="Imagenes\darksoul2.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Dark Soul 2</h2>
+                    <p class="price">29€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Contenido de la sección SWITCH -->
+    <section id="switch" style="display: none;">
+       
+        <h2>Nintengo, ¡Here we go!</h2>
+        
+        <div class="container-juegos">
+
+            <div class="container-switch">
+                <figure>
+                    <img src="Imagenes\pokemon.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Pokemon Escarlata </h2>
+                    <p class="price">49€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-switch">
+                <figure>
+                    <img src="Imagenes\zelda.jpg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Zelda Tears of the Kindom </h2>
+                    <p class="price">55€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-switch">
+                <figure>
+                    <img src="Imagenes\wonder.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Super Mario Bros Wonder</h2>
+                    <p class="price">54€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-switch">
+                <figure>
+                    <img src="Imagenes\animalcrossing.jpg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Animal Crossing</h2>
+                    <p class="price">54€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Contenido de la sección XBOX -->
+    <section id="xbox" style="display: none;">
+        <h2>Somos de XBOX</h2>
+        <div class="container-juegos">
+
+            <div class="container-xbox">
+                <figure>
+                    <img src="Imagenes\farcry6.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Far Cry 6</h2>
+                    <p class="price">20€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-xbox">
+                <figure>
+                    <img src="Imagenes\thesurge.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>The Surge</h2>
+                    <p class="price">9€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-xbox">
+                <figure>
+                    <img src="Imagenes\battlefield.jpg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Battlefield 1</h2>
+                    <p class="price">14€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-xbox">
+                <figure>
+                    <img src="Imagenes\fallout76.jpg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Fallout 76</h2>
+                    <p class="price">15€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contenido de la sección juegos de mesa -->
+    <section id="mesa" style="display: none;">
+        <h2>Juegos de Mesa</h2>
+        <div class="container-juegos">
+
+            <div class="container-mesa">
+                <figure>
+                    <img src="Imagenes\risk.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Risk</h2>
+                    <p class="price">45€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-mesa">
+                <figure>
+                    <img src="Imagenes\catan.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Catán</h2>
+                    <p class="price">37€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-mesa">
+                <figure>
+                    <img src="Imagenes\ciudadelas.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Ciudadelas</h2>
+                    <p class="price">14€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-mesa">
+                <figure>
+                    <img src="Imagenes\cluedo.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Cluedo</h2>
+                    <p class="price">22€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Contenido de la sección juegos clasicos-->
+    <section id="clasicos" style="display: none;">
+        <h2>Los que nunca fallan...</h2>
+        <div class="container-juegos">
+
+            <div class="container-clasicos">
+                <figure>
+                    <img src="Imagenes\parchis.png" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Parchis</h2>
+                    <p class="price">10€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-clasicos">
+                <figure>
+                    <img src="Imagenes\scrabble.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Scrabble</h2>
+                    <p class="price">14€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-clasicos">
+                <figure>
+                    <img src="Imagenes\uno.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>UNO</h2>
+                    <p class="price">9€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+            <div class="container-clasicos">
+                <figure>
+                    <img src="Imagenes\coleccion.jpeg" alt="juego">
+                </figure>
+                <div class="info-juego">
+                    <h2>Colección Juegos</h2>
+                    <p class="price">18€</p>
+                    <button class="btn-add-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!--Tabla de Juegos más vendidos -->
+    <div class="tabla">
+        <div class="titulo-tabla"><h1>TOP JUEGOS MÁS VENDIDOS</h1>
+         <div class="tabla-top"> 
+            <table>
+            <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Juego</th>
+                <th>Precio</th>
+                <th>Año</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Zelda</td>
+                <td>55€</td>
+                <td>2022</td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lies of P</td>
+                <td>54€</td>
+                <td>2023</td> 
+                           
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Spider-Man 2</td>
+                <td>79€</td>
+                <td>2023</td>
+                
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Super Mario Bros Wonder</td>
+                <td>54€</td>
+                <td>2023</td>
+                
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>FC24</td>
+                <td>35€</td>
+                <td>2023</td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+  </div>
+ </div>
+ </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
